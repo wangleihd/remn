@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const session = require('express-session');
+const bcrypt = require('bcrypt');
+const salt = 10;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -34,6 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.get('/login', function(req, res, next){
+  // bcrypt.hash(req.body.pass, salt, function(err, hash){
+  //   console.log(hash);
+  // });
   req.session.user = 'Welcome to REMN login page.';
   res.send(req.session.user);
 })
