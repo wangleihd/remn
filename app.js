@@ -4,11 +4,20 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const session = require('express-session');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+app.use(session({
+  resave: true,
+  saveUninitialized: false,
+  secret: '3nqr9xzx2438fgsdam4324n',
+  cookie: {
+      maxAge: 1000 * 60 * 30
+  }
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.get('/login', function(req, res, next){
+  req.session.user = 'Welcome to REMN login page.';
+  res.send(req.session.user);
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
