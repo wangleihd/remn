@@ -12,9 +12,12 @@
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
     "express": "~4.15.2",
+    "express-react-views": "^0.10.2",
     "express-session": "^1.15.2",
     "mongoose": "^4.9.6",
     "morgan": "~1.8.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "serve-favicon": "~2.4.2",
     "socket.io": "^1.7.3"
   }
