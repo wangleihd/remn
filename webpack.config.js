@@ -9,7 +9,7 @@ let configs = {
     index: './components/index.js',
   },
   output: {
-    path: path.join(ROOT_PATH, 'dist'),
+    path: path.join(ROOT_PATH, 'public'),
     publicPath: '/', // output.path的相对路径
     filename: 'js/[name].js' // 根据原始名动态命名
   },

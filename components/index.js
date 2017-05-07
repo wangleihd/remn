@@ -19,7 +19,6 @@ var Index = React.createClass({
       <div>
       <h1>Hello</h1>
       <Head name="React">
-        React
       </Head>
 
       </div>
