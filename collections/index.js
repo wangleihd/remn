@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://192.168.1.11:27017/stu';
+const url = 'mongodb://cnstu.top:27017/stu';
+//const url = 'mongodb://192.168.1.11:27017/stu';
 
 mongoose.connect(url);
 

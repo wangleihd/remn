@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+var webpack = require('webpack');
+var WebpackHotMiddleware = require('webpack-hot-middleware');
+var WebpackDevMiddleware = require('webpack-dev-middleware');
+var config = require('./webpack.config.js');
+var compiler = webpack(config);
 const salt = 10;
 
 var index = require('./routes/index');
@@ -19,12 +24,22 @@ app.use(session({
   cookie: {
       maxAge: 1000 * 60 * 30
   }
-}))
+}));
+
+// webpack middleware
+app.use(WebpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath,
+  stats: { colors: true }
+}));
+app.use(WebpackHotMiddleware(compiler));
+
 
 // view engine setup
-app.set('views', path.join(__dirname, '/components'));
-app.set('view engine', 'jsx');
-app.engine('jsx', require('express-react-views').createEngine());
+// app.set('views', path.join(__dirname, '/components'));
+// app.set('view engine', 'jsx');
+// app.engine('jsx', require('express-react-views').createEngine());
+app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
