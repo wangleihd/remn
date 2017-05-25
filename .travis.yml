@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get install make g++ python -y
   
 install:
-  - sudo npm install node-gyp -g
+  - npm install node-gyp -g
   
 before_script:
   - sudo npm install node-gyp -g
