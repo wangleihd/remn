@@ -2,9 +2,10 @@ language: node_js
 
 node_js:
   - 6
+before_script:
+  - sudo npm install node-gyp -g
 
 script:
-  - npm install node-gyp -g
   - npm start
 
 before_install:
