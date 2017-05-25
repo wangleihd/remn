@@ -7,9 +7,9 @@ script:
   - npm start
 
 before_install:
-  - sudo apt-get install python
   - sudo apt-get install make
   - sudo apt-get install g++
+  - sudo apt-get install python
   - sudo npm install node-gyp -g
 
 notifications:
