@@ -10,7 +10,7 @@ install:
   - npm install node-gyp -g
   
 before_script:
-  - sudo npm install node-gyp -g
+  - npm install node-gyp -g
 
 script:
   - npm start
