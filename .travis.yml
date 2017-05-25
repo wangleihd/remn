@@ -2,15 +2,15 @@ language: node_js
 
 node_js:
   - 6
+
+before_install:
+  - sudo apt-get install make g++ python -y
+
 before_script:
   - sudo npm install node-gyp -g
 
 script:
   - npm start
-
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install make g++ python -y
 
 notifications:
   email:
