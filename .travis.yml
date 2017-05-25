@@ -9,7 +9,7 @@ script:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install make g++ python -y
-  - sudo npm install node-gyp -g
+  - npm install node-gyp -g
 
 notifications:
   email:
