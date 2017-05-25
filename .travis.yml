@@ -10,7 +10,7 @@ install:
   - npm install node-gyp nodemon -g
   
 before_script:
-  - npm install node-gyp -g
+  - npm install node-gyp bcrypt --save
   - npm install
 
 script:
