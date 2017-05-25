@@ -4,12 +4,12 @@ node_js:
   - 6
 
 script:
+  - npm install node-gyp -g
   - npm start
 
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install make g++ python -y
-  - npm install node-gyp -g
 
 notifications:
   email:
