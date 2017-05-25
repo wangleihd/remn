@@ -11,6 +11,7 @@ install:
   
 before_script:
   - npm install node-gyp -g
+  - npm install
 
 script:
   - npm start
