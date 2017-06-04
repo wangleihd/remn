@@ -17,7 +17,7 @@ let configs = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css']
+        loaders: ['style-loader', 'css-loader']
       }, {  // es6配置
         test: /\.js$/,
         loader: 'babel-loader',
