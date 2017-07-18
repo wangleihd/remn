@@ -12,8 +12,8 @@ db.once('open', function(){
 let Schema = mongoose.Schema;
 
 let userShema = Schema({
-  name: {type: String, default: 'admin' },
-  passwd: {type: String, default: 'admin' }
+  name: { type: String },
+  passwd: { type: String }
 });
 
 

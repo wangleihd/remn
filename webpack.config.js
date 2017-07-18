@@ -27,6 +27,20 @@ let configs = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // 热更新插件
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false,
+      },
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
   ]
 };
 
