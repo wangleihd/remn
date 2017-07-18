@@ -13,7 +13,7 @@ let Schema = mongoose.Schema;
 
 let userShema = Schema({
   name: { type: String },
-  passwd: { type: String }
+  password: { type: String }
 });
 
 

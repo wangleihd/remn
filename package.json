@@ -14,7 +14,7 @@
     "ejs": "~2.5.6",
     "express": "~4.15.2",
     "express-react-views": "^0.10.2",
-    "express-session": "^1.15.2",
+    "express-session": "^1.15.3",
     "material-ui": "^0.18.1",
     "mongoose": "^4.9.6",
     "morgan": "~1.8.1",

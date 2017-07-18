@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
   bcrypt.hash(req.body.password, salt, (err, hash) => {
     var user = new db.user({
-      name: req.body.name,
+      name: req.body.username,
       password: hash
     });
     user.save((err, data) => {
