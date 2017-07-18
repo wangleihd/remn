@@ -15,6 +15,8 @@ const salt = 10;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var login = require('./routes/login');
+var register = require('./routes/register');
 
 var app = express();
 app.use(session({
@@ -51,13 +53,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.get('/login', function(req, res, next){
-  // bcrypt.hash(req.body.pass, salt, function(err, hash){
-  //   console.log(hash);
-  // });
-  req.session.user = 'Welcome to REMN login page.';
-  res.send(req.session.user);
-})
+app.use('/login', login);
+app.use('/register', register);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <form class="" action="/register" method="post">
+            <div class="form-login">
+            <h4>Register</h4>
+            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="User Name" name="username" />
+            <h4></h4>
+            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Input Password" name="password" />
+            <br>
+            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="Input Password" name="repassword" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">
+                <button type="submit" class="btn btn-success btn-md">register <i class="fa fa-sign-in"></i></button>
+                <a href="/login"  class="btn btn-default btn-md">login </a>
+            </span>
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+  </body>
+</html>
