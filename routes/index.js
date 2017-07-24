@@ -8,7 +8,13 @@ router.get('/', function(req, res, next) {
     req.session.name = null;
   }
   console.log(req.session.name);
-  res.render('index', { title: 'TodoList' , name: req.session.name });
+  var data = {
+    name: 'React-ejs',
+    age: 19,
+    sex: 'famanl',
+    user: 'amber'
+  }
+  res.render('index', { title: 'TodoList' , name: req.session.name , data: data});
 });
 
 module.exports = router;
