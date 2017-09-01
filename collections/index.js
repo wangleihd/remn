@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const url = 'mongodb://remn:remn@ds163301.mlab.com:63301/remn';
-
-mongoose.connect(url);
+mongoose.Promise = global.Promise;
+mongoose.connect(url, {useMongoClient: true});
 
 let db = mongoose.connection;
 
