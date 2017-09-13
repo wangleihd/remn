@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 var ROOT_PATH = path.resolve(__dirname);
 
@@ -41,6 +42,13 @@ let configs = {
           NODE_ENV: JSON.stringify("production"),
       },
     }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ]
 };
 

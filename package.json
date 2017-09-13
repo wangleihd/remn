@@ -7,8 +7,10 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "bcrypt": "^1.0.2",
     "body-parser": "~1.17.1",
+    "compression-webpack-plugin": "^1.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
@@ -27,8 +29,8 @@
     "redux": "^3.6.0",
     "serve-favicon": "~2.4.2",
     "socket.io": "^1.7.3"
-},
-"devDependencies": {
+  },
+  "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-react": "^6.24.1",
@@ -37,5 +39,5 @@
     "webpack": "^2.5.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
-}
+  }
 }
